@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcNETService.Generated";
+
+service DroidService {
+  rpc GetAll (DroidsRequest) returns (DroidsReply);
+}
+
+message DroidsRequest { }
+
+message DroidsReply {
+  repeated Droid droids = 1;
+}
+
+message Droid {
+  repeated string armament = 1;
+  string class = 2;
+  repeated string equipment = 3;
+  int32 height = 4;
+  string manufacturer = 5;
+  string model = 6;
+  repeated string plating_color = 7;
+  int32 price = 8;
+  repeated string sensor_color = 9;
+}
+
+
+
