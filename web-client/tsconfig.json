@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
@@ -9,11 +10,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": [
-    "test",
-    "src"
-  ],
-  "files": [
-    "src/resource.d.ts"
-  ]
+  "include": ["test", "src"],
+  "files": ["src/resource.d.ts"]
 }

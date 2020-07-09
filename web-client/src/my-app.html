@@ -1,1 +1,25 @@
 <div class="message">${message}</div>
+
+<button click.trigger="btnClicked()">Get All Droids</button>
+
+<div if.bind="droidsList.length!==0">
+  <div class="heading">DroidsList</div>
+  <div repeat.for="droid of droidsList" class="droid">
+    <div class="heading">${droid.getModel()}</div>
+    <div>Class: ${droid.getClass()}</div>
+    <div>🏭 <em>${droid.getManufacturer()}</em></div>
+    <div>Plating colors available is ${droid.getPlatingColorList()}</div>
+    <div>💰 ${droid.getPrice()}</div>
+  </div>
+</div>
+
+<div if.bind="droids.length!==0">
+  <div class="heading">DroidsList as Object</div>
+  <div repeat.for="droid of droids" class="droid">
+    <div class="heading">${droid.model}</div>
+    <div>Class: ${droid.pb_class}</div>
+    <div>🏭 <em>${droid.manufacturer}</em></div>
+    <div>Plating colors available is ${droid.platingColorList}</div>
+    <div>💰 ${droid.price}</div>
+  </div>
+</div>
